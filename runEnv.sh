@@ -1,2 +1,3 @@
-ABSOLUTE_PATH="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
-docker run -itv $SOURCE:/python pythoninstall /bin/bash
+SOURCE="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)/python"
+echo $SOURCE
+docker run -itv $SOURCE:/proj/python pythoninstall /bin/bash
